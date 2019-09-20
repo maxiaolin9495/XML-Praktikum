@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://docbook.org/xml/5.1/rng/docbook.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://docbook.org/xml/5.1/sch/docbook.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+
+<!-- Entities
+nbsp is &#x00A0;
+-->
+
+<!-- Hyphenations
+XSLTForms
+ma-ni-pu-late
+-->
+<article xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink"
+    version="5.1">
+    <info>
+        <title>Dokumentation - Aufgabe 2</title>
+        <author>
+            <personname>Gruppe: HTML Forms</personname>
+        </author>
+        <orgname>Technische Universität München</orgname>
+    </info>
+    <section>
+        <title>Blackjack</title>
+        <para>Bei Blackjack handelt es sich um ein Kartenspiel, das mit sechs französischen Decks gespielt wird. Bis zu sieben Spieler spielen gegen die Bank. Ziel der Spieler ist es, mit zwei oder mehr Karten mehr Punkte als der Croupier zu erreichen, ohne 21 Punkte zu überschreiten. Umgekehrt ist es das Ziel des Croupiers, mindestens so viele Punkte wie jeder Spieler zu erreichen, ohne 21 Punkte zu überschreiten.</para>
+        <section>
+            <title>Konzeptdesign</title>
+            <para>Zu Beginn tätigt jeder Spieler seine Einsätze. Neben einem Mindesteinsatz, wie bei Poker, gibt es zudem ein Limit, also einen Maximaleinsatz. Jeder Spieler tätigt zunächst den Einsatz in seiner eigenen Box. Anschließend ist auch ein Einsatz in fremde Boxen möglich. Jeder Spieler erhält dann zwei Karten, der Croupier - der Vertreter der Bank - eine. Zieht ein Spieler hierbei ein Ass und eine 10 bzw. Ass und König/Dame/Bube, so hat er einen Blackjack. Zieht hingegen der Croupier als erste Karte ein Ass, so haben die Spieler die Möglichkeit durch Setzen der Hälfte ihres regulären Einsatzes als Insurance-Einsatzes auf die Insurance-Line auf das anschließende Ziehen einer 10 / eines Buben / einer Dame / eines Königs durch den Croupier zu wetten. Gewinnen die Spieler die Wette, so erhalten sie das Doppelte ihres Insurance-Einsatzes als Gewinn, andernfalls verlieren sie diesen Einsatz. Der Reihe nach kann dann jeder Spieler so lange weitere Karten ziehen (Take), bis er exakt 21 Punkte erreicht, 21 Punkte überschreitet, oder freiwillig seinen Zug beendet. Vor jedem Take hat ein Spieler die Möglichkeit seinen Einsatz zu verdoppeln; er zieht anschließend noch genau eine Karte. Erreicht ein Spieler mit mehr als zwei Karten 21 Punkte, so hat er lediglich den maximal erreichbaren Punktestand, aber keinen Blackjack erreicht. Zudem kann ein Spieler, der über doppelte Hände verfügt (Karten liegen doppelt vor), seine Hand in zwei Hände aufspalten (Split); für die zweite Hand ist derselbe Einsatz wie für die erste Hand zu tätigen. Ein Spieler mit mehreren Händen zieht für jede Hand Karten, es handelt sich aber nur dann um eine Sieg, wenn der Spieler mit beiden Händen gewinnt, und nur dann um eine Niederlage, wenn der Spieler mit beiden Händen verliert; in allen anderen Fällen handelt es sich um ein Unentschieden. Haben alle Spieler und der Croupier ihren Zug getätigt, endet die Runde.</para>
+            <para>Jeder Spielteilnehmer mit der höchsten Punktezahl kleiner gleich 21 gewinnt. Ein Blackjack ist hierbei höher zu gewichten als 21 Punkte die mit mehr als zwei Karten erreicht wurden. Gewinnt lediglich der Croupier, verlieren sämtliche Spieler ihren Einsatz, gewinnt ein einzelner oder gewinnen mehrere Spieler, so gewinnen sie den Gegenwert ihres Einsatzes und erhalten ihren Einsatz zurück. Gewinnen sowohl ein oder mehrere Spieler, als auch der Croupier, so erhalten diese Spieler ihren Einsatz zurück, die anderen Spieler verlieren ihren aber.</para>
+        </section>
+        <section>
+            <title>SVG-Bilder</title>
+            <para>
+                Bei Exercise 2 haben wir einige SVGs geschrieben, eine für den Spieltisch, eine für Chips, die anderen für die Karten. Genauer haben wir die Grundelemente der Karten gemalt: Buchstaben A, J, Q, K, Zahlen von 2 bis 10, und die vier Farbensymbol.
+            </para>
+        </section>
+        <section>
+            <title>Implementierungsdesign</title>
+            <itemizedlist>
+                <listitem>
+                    <para>Das Programm beginnt im Hauptmenü. Ein Neues Spiel kann gestartet oder ein zuvor begonnenes kann wiederaufgenommen werden.</para>
+                </listitem>
+                <listitem>
+                    <para>Die Spieler können Einsätze in Fünferschritten zwischen 5 und 100 Währungseinheiten tätigen.</para>
+                </listitem>
+                <listitem>
+                    <para>Der Croupier zieht bis zu einem Punktestand von 16 immer eine Karte (Take) und beendet ab einem Punktestand von 17 stets seinen Zug (Stand).</para>
+                </listitem>
+                <listitem>
+                    <para>Wir verzichten auf Ausnahmeregeln beim Split.</para>
+                </listitem>
+                <listitem>
+                    <para>Wir verzichten auf Varianten-Regeln.</para>
+                </listitem>
+            </itemizedlist>
+        </section>
+    </section>
+</article>

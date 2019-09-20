@@ -1,0 +1,14 @@
+<!ELEMENT gameStore (game+)>
+	<!ELEMENT game (title, image?, developer, dateOfPublication, price, genre, gameMode, legalAge, languages, sounds, gameDuration)>
+		<!ELEMENT title (#PCDATA)>
+		<!ELEMENT developer (#PCDATA)>
+		<!ELEMENT dateOfPublication (#PCDATA)>
+		<!ELEMENT price (#PCDATA)>
+		<!ELEMENT genre (#PCDATA)>
+		<!ELEMENT gameMode (#PCDATA)>
+		<!ELEMENT legalAge (#PCDATA)>
+		<!ELEMENT languages (language+)>
+			<!ELEMENT language (#PCDATA)>
+		<!ELEMENT sounds (sound+)>
+			<!ELEMENT sound (#PCDATA)>
+		<!ELEMENT gameDuration (#PCDATA)>

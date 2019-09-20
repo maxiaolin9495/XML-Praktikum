@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://docbook.org/xml/5.1/rng/docbook.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://docbook.org/xml/5.1/sch/docbook.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+
+<!-- Entities
+nbsp is &#x00A0;
+-->
+
+<!-- Hyphenations
+XSLTForms
+ma-ni-pu-late
+-->
+<article xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink"
+    version="5.1">
+    <info>
+        <title>Dokumentation - Aufgabe 1</title>
+        <author>
+            <personname>Gruppe: HTML Forms</personname>
+        </author>
+        <orgname>Technische Universität München</orgname>
+    </info>
+    <section>
+        <title>Design</title>
+        <para>Bei unserer Anwendung handelt es sich um eine Sammlung von Videospielen. Den einzelnen Spielen sind die Attribute Titel, Entwickler, Veröffentlichungsdatum, Preis, Genre, Spielmodus (Mehrspieler, Splitscreen, oder Einzelspieler), Altersfreigabe, Textsprache, Tonsprache, und durchschnittliche Spieldauer zugeordnet. Die Darstellung erfolgt in Form einer einspaltigen Liste, in der sämtliche Spiele enthalten sind. Unter jedem Eintrag sind die vollständigen Informationen zusammengefasst.</para>
+    </section>
+    <section>
+        <title>Umsetzung</title>
+        <para>Zunächst haben wir acht bekannte Spiele auf Steam ausgewählt und deren Informationen ,Veröffentlichungsdatum, Sprache, usw., gesammelt. Anschließend haben wir die entsprechenden Informationen gruppiert nach Spiel innerhalb der Spielesammlung in eine XML-Datei eingefügt. Daraufhin haben wir eine DTD-Datei erstellt und darin alle in der XML-Datei vorkommenden Strukturelemente und Notationen definiert. Dabei haben wir auch ihre Wiederholungshäufigkeit begrenzt. Außerdem haben wir eine CSS-Datei erstellt und so konfiguriert, dass sämtliche Elemente der XML-Datei hinsichtlich ihrer optischen Darstellung gestaltet sind. Während des Prozesses haben wir die Ergebnisse immer wieder manuell geprüft und sofern erforderlich Anpassungen vorgenommen.</para>
+    </section>
+</article>

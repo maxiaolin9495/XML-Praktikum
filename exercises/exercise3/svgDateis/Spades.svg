@@ -1,0 +1,16 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+        "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<svg width="150" height="160" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <title>spade</title>
+    <g transform="translate(75,75) rotate(180) translate(-75,-75)">
+        <circle cx="40" cy="50" r="40" stroke=""
+                stroke-width="2" fill="black"/>
+        <circle cx="110" cy="50" r="40" stroke=""
+                stroke-width="2" fill="black"/>
+        <rect x="40" y="60" width="80" height="20" fill="black"/>
+        <polygon  fill="black" points="11.5,78 138.5,78 75,140"/>
+    </g>
+    <polygon  fill="black" points="60,155 90,155 75,110"/>
+</svg>

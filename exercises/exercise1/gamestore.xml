@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="gamestore.css"?>
+
+<!DOCTYPE gameStore SYSTEM "gamestore.dtd">
+
+<gameStore>
+	<game>
+		<title>Counter-Strike: Global Offensive</title>
+        <developer>Valve: Hidden Path Entertainment</developer>
+        <dateOfPublication>21.08.2012</dateOfPublication>
+        <price>0.00€</price>
+        <genre>FPS</genre>
+        <gameMode>Multiplayer</gameMode>
+        <legalAge>16</legalAge>
+        <languages>
+            <language>Deutsch</language>
+            <language>Tschechisch</language>
+            <language>Dänisch</language>
+            <language>Englisch</language>
+        </languages>
+        <sounds>
+            <sound>Englisch</sound>
+        </sounds>
+        <gameDuration>00:33:29</gameDuration>
+	</game>
+	<game>
+		<title>The SIMS 3</title>
+        <developer>The Sims Studios</developer>
+        <dateOfPublication>02.06.2009</dateOfPublication>
+        <price>39.99€</price>
+        <genre>Simulation</genre>
+        <gameMode>Singleplayer</gameMode>
+        <legalAge>6</legalAge>
+        <languages>
+            <language>Deutsch</language>
+            <language>Tschechisch</language>
+            <language>Dänisch</language>
+            <language>Niederländisch</language>
+            <language>Englisch</language>
+        </languages>
+        <sounds>
+            <sound>Simlisch</sound>
+        </sounds>
+        <gameDuration>45:32:11</gameDuration>
+	</game>
+	<game>
+		<title>Spellforce 3</title>
+        <developer>Grimlore Games</developer>
+        <dateOfPublication>07.12.2017</dateOfPublication>
+        <price>49.99€</price>
+        <genre>Strategie mit Rollenspielelementen</genre>
+        <gameMode>Singleplayer</gameMode>
+        <legalAge>12</legalAge>
+        <languages>
+            <language>Deutsch</language>
+            <language>Englisch</language>
+            <language>Französisch</language>
+            <language>Italienisch</language>
+            <language>Spanisch - Spanien</language>
+        </languages>
+        <sounds>
+            <sound>Deutsch</sound>
+            <sound>Englisch</sound>
+        </sounds>
+        <gameDuration>01:14:36</gameDuration>
+	</game>
+	<game>
+		<title>LEGO Star Wars - The Complete Saga</title>
+        <developer>Traveller's Tales</developer>
+        <dateOfPublication>13.11.2009</dateOfPublication>
+        <price>5.87€</price>
+        <genre>Abenteuer</genre>
+        <gameMode>Splitscreen</gameMode>
+        <legalAge>6</legalAge>
+        <languages>
+            <language>Deutsch</language>
+            <language>Englisch</language>
+            <language>Französisch</language>
+            <language>Italienisch</language>
+            <language>Spanisch - Spanien</language>
+        </languages>
+        <gameDuration>03:02:14</gameDuration>
+	</game>
+	<game>
+		<title>Totally Accurate Battle Simulator</title>
+        <developer>Landfall</developer>
+        <dateOfPublication>01.04.2019</dateOfPublication>
+        <price>12.49€</price>
+        <genre>Indie</genre>
+        <gameMode>Singleplayer</gameMode>
+        <legalAge>12</legalAge>
+        <languages>
+            <language>Englisch</language>
+        </languages>
+        <gameDuration>00:27:05</gameDuration>
+	</game>
+	<game>
+		<title>Tom Clancy's Ghost Recon Wildlands</title>
+        <developer>Ubisoft Paris</developer>
+        <dateOfPublication>07.03.2017</dateOfPublication>
+        <price>14.99€</price>
+        <genre>Action</genre>
+        <gameMode>Singleplayer</gameMode>
+        <legalAge>18</legalAge>
+        <languages>
+            <language>Deutsch</language>
+            <language>Englisch</language>
+            <language>Französisch</language>
+            <language>Italienisch</language>
+            <language>Spanisch - Spanien</language>
+        </languages>
+        <sounds>
+            <sound>Deutsch</sound>
+            <sound>Englisch</sound>
+            <sound>Französisch</sound>
+            <sound>Italienisch</sound>
+            <sound>Spanisch - Spanien</sound>
+        </sounds>
+        <gameDuration>01:36:37</gameDuration>
+	</game>
+	<game>
+		<title>Football Manager 2019</title>
+        <developer>Sports Interactive</developer>
+        <dateOfPublication>02.11.2018</dateOfPublication>
+        <price>27.49€</price>
+        <genre>Sport</genre>
+        <gameMode>Singleplayer</gameMode>
+        <legalAge>18</legalAge>
+        <languages>
+            <language>Deutsch</language>
+            <language>Englisch</language>
+            <language>Französisch</language>
+            <language>Italienisch</language>
+            <language>Spanisch - Spanien</language>
+        </languages>
+        <gameDuration>12:44:52</gameDuration>
+	</game>
+	<game>
+		<title>Vampire: The Masquerade - Bloodlines 2</title>
+        <developer>Hardsuit Labs</developer>
+        <dateOfPublication>11.03.2021</dateOfPublication>
+        <price>59.99€</price>
+        <genre>RPG</genre>
+        <gameMode>Singleplayer</gameMode>
+        <legalAge>18</legalAge>
+        <languages>
+            <language>Deutsch</language>
+            <language>Englisch</language>
+            <language>Französisch</language>
+            <language>Japanisch</language>
+            <language>Russisch</language>
+        </languages>
+        <sounds>
+            <sound>Englisch</sound>
+        </sounds>
+        <gameDuration>48:22:11</gameDuration>
+	</game>
+</gameStore>

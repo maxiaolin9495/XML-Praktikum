@@ -1,0 +1,35 @@
+<!-- DTD created at Wed May 15 22:07:51 CEST 2019 with EditiX XML Editor (http://www.editix.com). Please insert an encoding attribute header for converting any DTD  -->
+
+<!ELEMENT state (deck,dealer,player*)>
+<!ATTLIST state
+  currentPlayer (PER-1|PER-2|PER-3|PER-4|PER-5|PER-6|PER-7|Dealer) #REQUIRED
+  name CDATA #REQUIRED
+  gameState (new|betted|started|ended) #REQUIRED>
+
+<!ELEMENT deck (card+)>
+
+<!ELEMENT dealer (card*)>
+<!ATTLIST dealer
+  id (Dealer) #FIXED "Dealer"
+  handValue CDATA #REQUIRED>
+  
+<!ELEMENT player (hand+)>
+<!ATTLIST player
+  id (PER-1|PER-2|PER-3|PER-4|PER-5|PER-6|PER-7) #REQUIRED
+  currentHand (PER-1-1|PER-1-2|PER-2-1|PER-2-2|PER-3-1|PER-3-2|PER-4-1|PER-4-2|PER-5-1|PER-5-2|PER-6-1|PER-6-2|PER-7-1|PER-7-2) #REQUIRED
+  name CDATA #REQUIRED
+  state (new|started|ended) #REQUIRED
+  deposit CDATA #REQUIRED>
+
+
+<!ELEMENT hand (card*)>
+<!ATTLIST hand
+  id (PER-1-1|PER-1-2|PER-2-1|PER-2-2|PER-3-1|PER-3-2|PER-4-1|PER-4-2|PER-5-1|PER-5-2|PER-6-1|PER-6-2|PER-7-1|PER-7-2) #REQUIRED
+  box CDATA #REQUIRED
+  handValue CDATA #REQUIRED>
+  
+<!ELEMENT card EMPTY>
+<!ATTLIST card
+  cardColour (Hearts|Diamonds|Clubs|Spades) #REQUIRED
+  cardValue (2|3|4|5|6|7|8|9|10|J|Q|K|A) #REQUIRED
+  isHidden (true|false) #REQUIRED>

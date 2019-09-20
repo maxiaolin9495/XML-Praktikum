@@ -1,0 +1,10 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+        "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<svg width="150" height="150" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <title>RedNumberA</title>
+    <path fill="red" d="M73,20 L40,125 L45,130 L75,20"/>
+    <path fill="red" d="M77,20 L110,125 L105,130 L75,20"/>
+    <path fill="red" d="M57,85 L93,85 L95,89 L55,89 Z"/>
+</svg>

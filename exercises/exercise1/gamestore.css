@@ -1,0 +1,57 @@
+gameStore {
+    background-color: lightblue;
+    width: 100%;
+    padding-left: 25%;
+}
+
+game {
+    width: 50%;
+    display:block;
+    text-align:center;
+    margin: 20px;
+}
+
+title:before { content: "Game: "; }
+title {
+    color: black;
+    text-align: center;
+    display: block; 
+    font-weight: bold;
+}
+
+developer:before { content: "Developer: "; }
+dateOfPublication:before { content: "Date of publication: "; }
+price:before { content: "Price: "; }
+genre:before { content: "Genre: "; }
+gameMode:before { content: "Game mode: "; }
+legalAge:before { content: "Legal Age: "; }
+developer, dateOfPublication, price, genre, gameMode, legalAge {
+    color:black;
+    display: block;
+    text-align: left;
+}
+
+languages:before { content: "Language: "; }
+sounds:before { content: "Sound: "; }
+languages, sounds {
+    display: block;
+    font-size:medium;
+    color:black; 
+    text-align: left;
+}
+
+language, sound {
+    margin-left: 40px;
+    display: list-item;
+    font-size:medium;
+    color:black; 
+    text-align: left;
+}
+
+gameDuration:before { content:"Game duration: "; }
+gameDuration {
+    display: block;
+    font-size: medium;
+    color:black;
+    text-align: left;
+}

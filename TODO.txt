@@ -1,0 +1,10 @@
+In XSL:
+- XSL für jeweils aktiven Spieler anpassen (Lovis; done)
+- Buttons für Zustandsübergänge einfügen (Xiaolin; done)
+- Funktionen mit Zuständen über HREFs verknüpfen (Xiaolin & Lovis; done)
+- Buttons überarbeiten(Xiaolin; done)
+
+In XQuery-Dateien:
+- Fehlende und unvollständige Funktionen ergänzen; drawCard & endTurn am wichtigsten (Rodeina & Emir)
+- Einstiegsdatei "blackjack.xqy" bearbeiten; vgl. "project/restxq.xqm" (Lovis; done)
+- Funktionen mit RESTXQ-Pfaden verknüpfen; vgl. "project/dba/*/*.xqm" (?; partially done)

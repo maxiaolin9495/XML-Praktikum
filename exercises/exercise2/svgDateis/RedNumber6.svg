@@ -1,0 +1,12 @@
+<svg width="150" height="150" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <title>RedNumber6</title>
+
+    <path fill="black" d="M65,25 L46,80 L60,70 L75,25 Z"/>
+    <g transform="translate(0,30)">
+        <path fill="black" d="M43,65 Q45,35 70,35 Q95,35 97,65 L90,65 Q90,42 70,42 Q50,42 50,65 L40,65 Z"/>
+        <g transform="translate(70,40) rotate(180) translate(-70,-75)">
+             <path fill="black" d="M43,50 Q45,20 70,20 Q95,20 97,50 L90,50 Q90,27 70,27 Q50,27 50,50 L40,50 Z"/>
+         </g>
+    </g>
+
+</svg>

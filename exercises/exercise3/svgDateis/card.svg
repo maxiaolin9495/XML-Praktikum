@@ -1,0 +1,21 @@
+<svg width="160" height="220" version="1.1" xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 160 220">
+    <g>
+        <image x="0" y="0" preserveAspectRatio="xMinYMin slice"
+               width="160" height="220" xlink:href="./cardBackground.svg"/>
+    </g>
+    <g>
+        <image x="60" y="90" preserveAspectRatio="xMinYMin slice"
+               width="40" height="40" xlink:href="./Diamonds.svg"/>
+    </g>
+    <g>
+        <image x="10" y="15" preserveAspectRatio="xMinYMin slice"
+               width="40" height="40" xlink:href="./RedA.svg"/>
+    </g>
+    <g transform="translate(30,35) rotate(180) translate(-125, -180)" >
+        <image  x="10" y="15" width="40" height="40"
+                preserveAspectRatio="xMinYMin slice"  xlink:href="./RedA.svg"/>
+    </g>
+</svg>
+
+

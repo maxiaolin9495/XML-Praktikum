@@ -1,0 +1,15 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+        "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<svg width="150" height="150" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <title>chip</title>
+    <circle cx="75" cy="75" r="50" stroke=""
+            stroke-width="2" fill="lightblue"/>
+    <rect x="70" y="25" width="10" height="100" fill="white"/>
+    <rect x="25" y="70" width="100" height="10" fill="white"/>
+    <circle cx="75" cy="75" r="40" stroke=""
+            stroke-width="2" fill="white"/>
+    <circle cx="75" cy="75" r="30" stroke=""
+            stroke-width="2" fill="lightblue"/>
+</svg>

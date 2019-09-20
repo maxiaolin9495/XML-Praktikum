@@ -1,0 +1,34 @@
+Player
+- name: String
+- isDealer: boolean
+- hands: Hand[3]
+- deposit: int
+
+State
+- dealer: Player
+- players: Player[7]
+- playerCounter: int
+- deck: List<Card>
+
+Hand
+- cards: List<Card>
+- box: int
+
+Card
+- cardValue: int
+- isHidden: boolean
+
+CardValue = enum:
+	Hearts
+	Diamonds
+	Clubs
+	Spades
+		__>:
+		2
+		3
+		...
+		10
+		J
+		Q
+		K
+		A

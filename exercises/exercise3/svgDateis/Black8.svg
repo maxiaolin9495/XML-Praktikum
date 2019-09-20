@@ -1,0 +1,7 @@
+
+<svg width="150" height="150" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <title>BlackNumber8</title>
+    <circle cx="75" cy="50" r="25" fill="none" stroke="black" stroke-width="5"/>
+    <circle cx="75" cy="100" r="25" fill="none" stroke="black" stroke-width="5"/>
+
+</svg>

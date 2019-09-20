@@ -1,0 +1,14 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+        "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<svg width="150" height="150" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <title>RedNumber2</title>
+    <g transform="translate(5,10)">
+         <path fill="red" d="M40,50 Q45,20 70,20 Q95,20 100,50 L90,50 Q90,30 70,30 Q50,30 50,50 L40,50"/>
+
+        <path fill="red" d="M100,50 L100,55 L55,90 L40,90 L90,50"/>
+
+        <rect x="40" y="90" width="60" height="10" fill="red"/>
+    </g>
+</svg>

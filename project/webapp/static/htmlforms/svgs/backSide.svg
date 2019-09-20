@@ -1,0 +1,10 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+        "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="160" height="220" version="1.1" xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>BackSide</title>
+    <rect x="1" y="1" width="158" height="218" fill="none" stroke-width="1" stroke="lightred"></rect>
+    <rect x="10" y="10" width="140" height="200" fill="pink" stroke="red" />
+    <image x="10" y="10" width="150" height="205" xlink:href="./svgs/Backside.png"/>
+</svg>

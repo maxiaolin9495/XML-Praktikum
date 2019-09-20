@@ -1,0 +1,16 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+        "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<svg width="150" height="160" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <title>kube</title>
+    <circle cx="75" cy="40" r="30" stroke=""
+            stroke-width="2" fill="black"/>
+
+    <circle cx="40" cy="90" r="30" stroke=""
+            stroke-width="2" fill="black"/>
+    <circle cx="110" cy="90" r="30" stroke=""
+            stroke-width="2" fill="black"/>
+    <polygon fill="black" points="54,61 96,61 75,120" />
+    <polygon fill="black" points="55,140 95,140 75,80"/>
+</svg>

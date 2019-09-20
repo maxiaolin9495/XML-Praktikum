@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="blackjack.xsl"?>
+
+<!DOCTYPE state SYSTEM "blackjack.dtd">
+
+<state currentPlayer="PER-1">
+    <deck>
+        <card cardColour="Diamonds" cardValue="2" isHidden="true"/>
+        <card cardColour="Diamonds" cardValue="3" isHidden="true"/>
+        <card cardColour="Diamonds" cardValue="4" isHidden="true"/>
+        <card cardColour="Diamonds" cardValue="5" isHidden="true"/>
+        <card cardColour="Diamonds" cardValue="6" isHidden="true"/>
+        <card cardColour="Diamonds" cardValue="7" isHidden="true"/>
+        <card cardColour="Diamonds" cardValue="8" isHidden="true"/>
+        <card cardColour="Diamonds" cardValue="9" isHidden="true"/>
+        <card cardColour="Diamonds" cardValue="10" isHidden="true"/>
+        <card cardColour="Diamonds" cardValue="J" isHidden="true"/>
+        <card cardColour="Diamonds" cardValue="Q" isHidden="true"/>
+        <card cardColour="Diamonds" cardValue="K" isHidden="true"/>
+        <card cardColour="Diamonds" cardValue="A" isHidden="true"/>
+        <card cardColour="Clubs" cardValue="2" isHidden="true"/>
+        <card cardColour="Clubs" cardValue="3" isHidden="true"/>
+        <card cardColour="Clubs" cardValue="4" isHidden="true"/>
+        <card cardColour="Clubs" cardValue="5" isHidden="true"/>
+        <card cardColour="Clubs" cardValue="6" isHidden="true"/>
+        <card cardColour="Clubs" cardValue="7" isHidden="true"/>
+        <card cardColour="Clubs" cardValue="8" isHidden="true"/>
+        <card cardColour="Clubs" cardValue="9" isHidden="true"/>
+        <card cardColour="Clubs" cardValue="10" isHidden="true"/>
+        <card cardColour="Clubs" cardValue="J" isHidden="true"/>
+        <card cardColour="Clubs" cardValue="Q" isHidden="true"/>
+        <card cardColour="Clubs" cardValue="K" isHidden="true"/>
+        <card cardColour="Clubs" cardValue="A" isHidden="true"/>
+        <card cardColour="Spades" cardValue="2" isHidden="true"/>
+        <card cardColour="Spades" cardValue="3" isHidden="true"/>
+        <card cardColour="Spades" cardValue="4" isHidden="true"/>
+        <card cardColour="Spades" cardValue="5" isHidden="true"/>
+        <card cardColour="Spades" cardValue="6" isHidden="true"/>
+        <card cardColour="Spades" cardValue="7" isHidden="true"/>
+        <card cardColour="Spades" cardValue="8" isHidden="true"/>
+        <card cardColour="Spades" cardValue="9" isHidden="true"/>
+        <card cardColour="Spades" cardValue="10" isHidden="true"/>
+        <card cardColour="Spades" cardValue="J" isHidden="true"/>
+        <card cardColour="Spades" cardValue="Q" isHidden="true"/>
+        <card cardColour="Spades" cardValue="K" isHidden="true"/>
+        <card cardColour="Spades" cardValue="A" isHidden="true"/>
+        <card cardColour="Hearts" cardValue="2" isHidden="true"/>
+        <card cardColour="Hearts" cardValue="3" isHidden="true"/>
+        <card cardColour="Hearts" cardValue="4" isHidden="true"/>
+        <card cardColour="Hearts" cardValue="5" isHidden="true"/>
+        <card cardColour="Hearts" cardValue="6" isHidden="true"/>
+        <card cardColour="Hearts" cardValue="7" isHidden="true"/>
+        <card cardColour="Hearts" cardValue="8" isHidden="true"/>
+        <card cardColour="Hearts" cardValue="9" isHidden="true"/>
+        <card cardColour="Hearts" cardValue="10" isHidden="true"/>
+        <card cardColour="Hearts" cardValue="J" isHidden="true"/>
+        <card cardColour="Hearts" cardValue="Q" isHidden="true"/>
+        <card cardColour="Hearts" cardValue="K" isHidden="true"/>
+        <card cardColour="Hearts" cardValue="A" isHidden="true"/>
+        <card cardColour="Diamonds" cardValue="2" isHidden="true"/>
+        <card cardColour="Diamonds" cardValue="3" isHidden="true"/>
+        <card cardColour="Diamonds" cardValue="4" isHidden="true"/>
+        <card cardColour="Diamonds" cardValue="5" isHidden="true"/>
+        <card cardColour="Diamonds" cardValue="6" isHidden="true"/>
+        <card cardColour="Diamonds" cardValue="7" isHidden="true"/>
+        <card cardColour="Diamonds" cardValue="8" isHidden="true"/>
+        <card cardColour="Diamonds" cardValue="9" isHidden="true"/>
+        <card cardColour="Diamonds" cardValue="10" isHidden="true"/>
+        <card cardColour="Diamonds" cardValue="J" isHidden="true"/>
+        <card cardColour="Diamonds" cardValue="Q" isHidden="true"/>
+        <card cardColour="Diamonds" cardValue="K" isHidden="true"/>
+        <card cardColour="Diamonds" cardValue="A" isHidden="true"/>
+        <card cardColour="Clubs" cardValue="2" isHidden="true"/>
+        <card cardColour="Clubs" cardValue="3" isHidden="true"/>
+        <card cardColour="Clubs" cardValue="4" isHidden="true"/>
+        <card cardColour="Clubs" cardValue="5" isHidden="true"/>
+        <card cardColour="Clubs" cardValue="6" isHidden="true"/>
+        <card cardColour="Clubs" cardValue="7" isHidden="true"/>
+        <card cardColour="Clubs" cardValue="8" isHidden="true"/>
+        <card cardColour="Clubs" cardValue="9" isHidden="true"/>
+        <card cardColour="Clubs" cardValue="10" isHidden="true"/>
+        <card cardColour="Clubs" cardValue="J" isHidden="true"/>
+        <card cardColour="Clubs" cardValue="Q" isHidden="true"/>
+        <card cardColour="Clubs" cardValue="K" isHidden="true"/>
+        <card cardColour="Clubs" cardValue="A" isHidden="true"/>
+        <card cardColour="Spades" cardValue="2" isHidden="true"/>
+        <card cardColour="Spades" cardValue="3" isHidden="true"/>
+        <card cardColour="Spades" cardValue="4" isHidden="true"/>
+        <card cardColour="Spades" cardValue="5" isHidden="true"/>
+        <card cardColour="Spades" cardValue="6" isHidden="true"/>
+        <card cardColour="Spades" cardValue="7" isHidden="true"/>
+        <card cardColour="Spades" cardValue="8" isHidden="true"/>
+        <card cardColour="Spades" cardValue="9" isHidden="true"/>
+        <card cardColour="Spades" cardValue="10" isHidden="true"/>
+        <card cardColour="Spades" cardValue="J" isHidden="true"/>
+        <card cardColour="Spades" cardValue="Q" isHidden="true"/>
+        <card cardColour="Spades" cardValue="K" isHidden="true"/>
+        <card cardColour="Spades" cardValue="A" isHidden="true"/>
+        <card cardColour="Hearts" cardValue="2" isHidden="true"/>
+        <card cardColour="Hearts" cardValue="3" isHidden="true"/>
+        <card cardColour="Hearts" cardValue="4" isHidden="true"/>
+        <card cardColour="Hearts" cardValue="5" isHidden="true"/>
+        <card cardColour="Hearts" cardValue="6" isHidden="true"/>
+        <card cardColour="Hearts" cardValue="7" isHidden="true"/>
+        <card cardColour="Hearts" cardValue="8" isHidden="true"/>
+        <card cardColour="Hearts" cardValue="9" isHidden="true"/>
+        <card cardColour="Hearts" cardValue="10" isHidden="true"/>
+        <card cardColour="Hearts" cardValue="J" isHidden="true"/>
+        <card cardColour="Hearts" cardValue="Q" isHidden="true"/>
+        <card cardColour="Hearts" cardValue="K" isHidden="true"/>
+        <card cardColour="Hearts" cardValue="A" isHidden="true"/>
+        <card cardColour="Diamonds" cardValue="2" isHidden="true"/>
+        <card cardColour="Diamonds" cardValue="3" isHidden="true"/>
+        <card cardColour="Diamonds" cardValue="4" isHidden="true"/>
+        <card cardColour="Diamonds" cardValue="5" isHidden="true"/>
+        <card cardColour="Diamonds" cardValue="6" isHidden="true"/>
+        <card cardColour="Diamonds" cardValue="7" isHidden="true"/>
+        <card cardColour="Diamonds" cardValue="8" isHidden="true"/>
+        <card cardColour="Diamonds" cardValue="9" isHidden="true"/>
+        <card cardColour="Diamonds" cardValue="10" isHidden="true"/>
+        <card cardColour="Diamonds" cardValue="J" isHidden="true"/>
+        <card cardColour="Diamonds" cardValue="Q" isHidden="true"/>
+        <card cardColour="Diamonds" cardValue="K" isHidden="true"/>
+        <card cardColour="Diamonds" cardValue="A" isHidden="true"/>
+        <card cardColour="Clubs" cardValue="2" isHidden="true"/>
+        <card cardColour="Clubs" cardValue="3" isHidden="true"/>
+        <card cardColour="Clubs" cardValue="4" isHidden="true"/>
+        <card cardColour="Clubs" cardValue="5" isHidden="true"/>
+        <card cardColour="Clubs" cardValue="6" isHidden="true"/>
+        <card cardColour="Clubs" cardValue="7" isHidden="true"/>
+        <card cardColour="Clubs" cardValue="8" isHidden="true"/>
+        <card cardColour="Clubs" cardValue="9" isHidden="true"/>
+        <card cardColour="Clubs" cardValue="10" isHidden="true"/>
+        <card cardColour="Clubs" cardValue="J" isHidden="true"/>
+        <card cardColour="Clubs" cardValue="Q" isHidden="true"/>
+        <card cardColour="Clubs" cardValue="K" isHidden="true"/>
+        <card cardColour="Clubs" cardValue="A" isHidden="true"/>
+        <card cardColour="Spades" cardValue="2" isHidden="true"/>
+        <card cardColour="Spades" cardValue="3" isHidden="true"/>
+        <card cardColour="Spades" cardValue="4" isHidden="true"/>
+        <card cardColour="Spades" cardValue="5" isHidden="true"/>
+        <card cardColour="Spades" cardValue="6" isHidden="true"/>
+        <card cardColour="Spades" cardValue="7" isHidden="true"/>
+        <card cardColour="Spades" cardValue="8" isHidden="true"/>
+        <card cardColour="Spades" cardValue="9" isHidden="true"/>
+        <card cardColour="Spades" cardValue="10" isHidden="true"/>
+        <card cardColour="Spades" cardValue="J" isHidden="true"/>
+        <card cardColour="Spades" cardValue="Q" isHidden="true"/>
+        <card cardColour="Spades" cardValue="K" isHidden="true"/>
+        <card cardColour="Spades" cardValue="A" isHidden="true"/>
+        <card cardColour="Hearts" cardValue="2" isHidden="true"/>
+        <card cardColour="Hearts" cardValue="3" isHidden="true"/>
+        <card cardColour="Hearts" cardValue="4" isHidden="true"/>
+        <card cardColour="Hearts" cardValue="5" isHidden="true"/>
+        <card cardColour="Hearts" cardValue="6" isHidden="true"/>
+        <card cardColour="Hearts" cardValue="7" isHidden="true"/>
+        <card cardColour="Hearts" cardValue="8" isHidden="true"/>
+        <card cardColour="Hearts" cardValue="9" isHidden="true"/>
+        <card cardColour="Hearts" cardValue="10" isHidden="true"/>
+        <card cardColour="Hearts" cardValue="J" isHidden="true"/>
+        <card cardColour="Hearts" cardValue="Q" isHidden="true"/>
+        <card cardColour="Hearts" cardValue="K" isHidden="true"/>
+        <card cardColour="Hearts" cardValue="A" isHidden="true"/>
+        <card cardColour="Diamonds" cardValue="2" isHidden="true"/>
+        <card cardColour="Diamonds" cardValue="3" isHidden="true"/>
+        <card cardColour="Diamonds" cardValue="4" isHidden="true"/>
+        <card cardColour="Diamonds" cardValue="5" isHidden="true"/>
+        <card cardColour="Diamonds" cardValue="6" isHidden="true"/>
+        <card cardColour="Diamonds" cardValue="7" isHidden="true"/>
+        <card cardColour="Diamonds" cardValue="8" isHidden="true"/>
+        <card cardColour="Diamonds" cardValue="9" isHidden="true"/>
+        <card cardColour="Diamonds" cardValue="10" isHidden="true"/>
+        <card cardColour="Diamonds" cardValue="J" isHidden="true"/>
+        <card cardColour="Diamonds" cardValue="Q" isHidden="true"/>
+        <card cardColour="Diamonds" cardValue="K" isHidden="true"/>
+        <card cardColour="Diamonds" cardValue="A" isHidden="true"/>
+        <card cardColour="Clubs" cardValue="2" isHidden="true"/>
+        <card cardColour="Clubs" cardValue="3" isHidden="true"/>
+        <card cardColour="Clubs" cardValue="4" isHidden="true"/>
+        <card cardColour="Clubs" cardValue="5" isHidden="true"/>
+        <card cardColour="Clubs" cardValue="6" isHidden="true"/>
+        <card cardColour="Clubs" cardValue="7" isHidden="true"/>
+        <card cardColour="Clubs" cardValue="8" isHidden="true"/>
+        <card cardColour="Clubs" cardValue="9" isHidden="true"/>
+        <card cardColour="Clubs" cardValue="10" isHidden="true"/>
+        <card cardColour="Clubs" cardValue="J" isHidden="true"/>
+        <card cardColour="Clubs" cardValue="Q" isHidden="true"/>
+        <card cardColour="Clubs" cardValue="K" isHidden="true"/>
+        <card cardColour="Clubs" cardValue="A" isHidden="true"/>
+        <card cardColour="Spades" cardValue="2" isHidden="true"/>
+        <card cardColour="Spades" cardValue="3" isHidden="true"/>
+        <card cardColour="Spades" cardValue="4" isHidden="true"/>
+        <card cardColour="Spades" cardValue="5" isHidden="true"/>
+        <card cardColour="Spades" cardValue="6" isHidden="true"/>
+        <card cardColour="Spades" cardValue="7" isHidden="true"/>
+        <card cardColour="Spades" cardValue="8" isHidden="true"/>
+        <card cardColour="Spades" cardValue="9" isHidden="true"/>
+        <card cardColour="Spades" cardValue="10" isHidden="true"/>
+        <card cardColour="Spades" cardValue="J" isHidden="true"/>
+        <card cardColour="Spades" cardValue="Q" isHidden="true"/>
+        <card cardColour="Spades" cardValue="K" isHidden="true"/>
+        <card cardColour="Spades" cardValue="A" isHidden="true"/>
+        <card cardColour="Hearts" cardValue="2" isHidden="true"/>
+        <card cardColour="Hearts" cardValue="3" isHidden="true"/>
+        <card cardColour="Hearts" cardValue="4" isHidden="true"/>
+        <card cardColour="Hearts" cardValue="5" isHidden="true"/>
+        <card cardColour="Hearts" cardValue="6" isHidden="true"/>
+        <card cardColour="Hearts" cardValue="7" isHidden="true"/>
+        <card cardColour="Hearts" cardValue="8" isHidden="true"/>
+        <card cardColour="Hearts" cardValue="9" isHidden="true"/>
+        <card cardColour="Hearts" cardValue="10" isHidden="true"/>
+        <card cardColour="Hearts" cardValue="J" isHidden="true"/>
+        <card cardColour="Hearts" cardValue="Q" isHidden="true"/>
+        <card cardColour="Hearts" cardValue="K" isHidden="true"/>
+        <card cardColour="Hearts" cardValue="A" isHidden="true"/>
+        <card cardColour="Diamonds" cardValue="2" isHidden="true"/>
+        <card cardColour="Diamonds" cardValue="5" isHidden="true"/>
+        <card cardColour="Diamonds" cardValue="6" isHidden="true"/>
+        <card cardColour="Diamonds" cardValue="7" isHidden="true"/>
+        <card cardColour="Diamonds" cardValue="8" isHidden="true"/>
+        <card cardColour="Diamonds" cardValue="9" isHidden="true"/>
+        <card cardColour="Diamonds" cardValue="10" isHidden="true"/>
+        <card cardColour="Diamonds" cardValue="J" isHidden="true"/>
+        <card cardColour="Diamonds" cardValue="Q" isHidden="true"/>
+        <card cardColour="Diamonds" cardValue="K" isHidden="true"/>
+        <card cardColour="Diamonds" cardValue="A" isHidden="true"/>
+        <card cardColour="Clubs" cardValue="2" isHidden="true"/>
+        <card cardColour="Clubs" cardValue="3" isHidden="true"/>
+        <card cardColour="Clubs" cardValue="4" isHidden="true"/>
+        <card cardColour="Clubs" cardValue="5" isHidden="true"/>
+        <card cardColour="Clubs" cardValue="6" isHidden="true"/>
+        <card cardColour="Clubs" cardValue="7" isHidden="true"/>
+        <card cardColour="Clubs" cardValue="8" isHidden="true"/>
+        <card cardColour="Clubs" cardValue="9" isHidden="true"/>
+        <card cardColour="Clubs" cardValue="10" isHidden="true"/>
+        <card cardColour="Clubs" cardValue="J" isHidden="true"/>
+        <card cardColour="Clubs" cardValue="Q" isHidden="true"/>
+        <card cardColour="Clubs" cardValue="K" isHidden="true"/>
+        <card cardColour="Clubs" cardValue="A" isHidden="true"/>
+        <card cardColour="Spades" cardValue="2" isHidden="true"/>
+        <card cardColour="Spades" cardValue="3" isHidden="true"/>
+        <card cardColour="Spades" cardValue="10" isHidden="true"/>
+        <card cardColour="Spades" cardValue="K" isHidden="true"/>
+        <card cardColour="Spades" cardValue="A" isHidden="true"/>
+        <card cardColour="Hearts" cardValue="2" isHidden="true"/>
+        <card cardColour="Hearts" cardValue="3" isHidden="true"/>
+        <card cardColour="Hearts" cardValue="4" isHidden="true"/>
+        <card cardColour="Hearts" cardValue="5" isHidden="true"/>
+        <card cardColour="Hearts" cardValue="8" isHidden="true"/>
+        <card cardColour="Hearts" cardValue="9" isHidden="true"/>
+        <card cardColour="Hearts" cardValue="10" isHidden="true"/>
+        <card cardColour="Hearts" cardValue="J" isHidden="true"/>
+        <card cardColour="Hearts" cardValue="Q" isHidden="true"/>
+        <card cardColour="Hearts" cardValue="K" isHidden="true"/>
+        <card cardColour="Hearts" cardValue="A" isHidden="true"/>
+        <card cardColour="Diamonds" cardValue="2" isHidden="true"/>
+        <card cardColour="Diamonds" cardValue="3" isHidden="true"/>
+        <card cardColour="Diamonds" cardValue="4" isHidden="true"/>
+        <card cardColour="Diamonds" cardValue="5" isHidden="true"/>
+        <card cardColour="Diamonds" cardValue="6" isHidden="true"/>
+        <card cardColour="Diamonds" cardValue="9" isHidden="true"/>
+        <card cardColour="Diamonds" cardValue="10" isHidden="true"/>
+        <card cardColour="Diamonds" cardValue="J" isHidden="true"/>
+        <card cardColour="Diamonds" cardValue="Q" isHidden="true"/>
+        <card cardColour="Diamonds" cardValue="K" isHidden="true"/>
+        <card cardColour="Diamonds" cardValue="A" isHidden="true"/>
+        <card cardColour="Clubs" cardValue="2" isHidden="true"/>
+        <card cardColour="Clubs" cardValue="3" isHidden="true"/>
+        <card cardColour="Clubs" cardValue="4" isHidden="true"/>
+        <card cardColour="Clubs" cardValue="5" isHidden="true"/>
+        <card cardColour="Clubs" cardValue="6" isHidden="true"/>
+        <card cardColour="Clubs" cardValue="7" isHidden="true"/>
+        <card cardColour="Clubs" cardValue="8" isHidden="true"/>
+        <card cardColour="Clubs" cardValue="9" isHidden="true"/>
+        <card cardColour="Clubs" cardValue="10" isHidden="true"/>
+    </deck>
+    <card cardColour="Spades" cardValue="Q" isHidden="true"/>
+    <dealer>
+        <card cardColour="Clubs" cardValue="A" isHidden="true"/>
+        <card cardColour="Spades" cardValue="A" isHidden="false"/>
+    </dealer>
+    <player id="PER-1" name="Lovis" deposit="180">
+        <hand box="10">
+            <card cardColour="Spades" cardValue="J" isHidden="false"/>
+            <card cardColour="Spades" cardValue="10" isHidden="false"/>
+        </hand>
+        <hand box="10">
+            <card cardColour="Spades" cardValue="J" isHidden="false"/>
+            <card cardColour="Spades" cardValue="Q" isHidden="false"/>
+        </hand>
+    </player>
+    <player id="PER-2" name="Rodeina" deposit="160">
+        <hand box="10">
+            <card cardColour="Diamonds" cardValue="7" isHidden="false"/>
+            <card cardColour="Diamonds" cardValue="8" isHidden="false"/>
+        </hand>
+        <hand box="20">
+            <card cardColour="Hearts" cardValue="2" isHidden="false"/>
+            <card cardColour="Hearts" cardValue="3" isHidden="false"/>
+            <card cardColour="Hearts" cardValue="4" isHidden="false"/>
+            <card cardColour="Hearts" cardValue="5" isHidden="false"/>
+            <card cardColour="Hearts" cardValue="6" isHidden="false"/>
+            <card cardColour="Hearts" cardValue="7" isHidden="false"/>
+            <card cardColour="Hearts" cardValue="8" isHidden="false"/>
+            <card cardColour="Hearts" cardValue="9" isHidden="false"/>
+            <card cardColour="Hearts" cardValue="10" isHidden="false"/>
+            <card cardColour="Hearts" cardValue="J" isHidden="false"/>
+            <card cardColour="Hearts" cardValue="Q" isHidden="false"/>
+            <card cardColour="Hearts" cardValue="K" isHidden="false"/>
+            <card cardColour="Hearts" cardValue="A" isHidden="false"/>
+        </hand>
+        <hand box="10">
+            <card cardColour="Spades" cardValue="9" isHidden="false"/>
+            <card cardColour="Spades" cardValue="K" isHidden="false"/>
+            <card cardColour="Spades" cardValue="2" isHidden="false"/>
+            <card cardColour="Spades" cardValue="3" isHidden="false"/>
+            <card cardColour="Spades" cardValue="4" isHidden="false"/>
+            <card cardColour="Spades" cardValue="5" isHidden="false"/>
+            <card cardColour="Spades" cardValue="6" isHidden="false"/>
+            <card cardColour="Spades" cardValue="7" isHidden="false"/>
+            <card cardColour="Spades" cardValue="8" isHidden="false"/>
+            <card cardColour="Clubs" cardValue="J" isHidden="false"/>
+            <card cardColour="Clubs" cardValue="Q" isHidden="false"/>
+            <card cardColour="Clubs" cardValue="K" isHidden="false"/>
+        </hand>
+    </player>
+    <player id="PER-3" name="Rodeina" deposit="190">
+        <hand box="10">
+            <card cardColour="Spades" cardValue="4" isHidden="false"/>
+            <card cardColour="Spades" cardValue="5" isHidden="false"/>
+        </hand>
+        <hand box="10">
+            <card cardColour="Spades" cardValue="6" isHidden="false"/>
+            <card cardColour="Spades" cardValue="7" isHidden="false"/>
+        </hand>
+        <hand box="10">
+            <card cardColour="Spades" cardValue="8" isHidden="false"/>
+            <card cardColour="Spades" cardValue="9" isHidden="false"/>
+        </hand>
+    </player>
+    <player id="PER-4" name="Xiaolin" deposit="190">
+        <hand box="10">
+            <card cardColour="Diamonds" cardValue="3" isHidden="false"/>
+            <card cardColour="Diamonds" cardValue="4" isHidden="false"/>
+        </hand>
+    </player>
+    <player id="PER-5" name="Emir" deposit="190">
+        <hand box="10">
+            <card cardColour="Hearts" cardValue="6" isHidden="false"/>
+            <card cardColour="Hearts" cardValue="7" isHidden="false"/>
+        </hand>
+    </player>
+</state>

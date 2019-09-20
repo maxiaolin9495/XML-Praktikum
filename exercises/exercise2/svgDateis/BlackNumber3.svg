@@ -1,0 +1,18 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+        "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<svg width="150" height="150" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <title>BlackNumber3</title>
+    <g transform="translate(7,10)">
+         <path fill="black" d="M43,40 Q45,23 70,23 Q95,23 97,45 L90,50 Q90,30 70,30 Q50,30 50,40 L43,40"/>
+         <g transform="translate(70,40) rotate(180) translate(-70,-90)">
+            <path fill="black" d="M43,45 Q45,23 70,23 Q95,23 97,40 L90,40 Q90,30 70,30 Q50,30 50,50 L43,45"/>
+        </g>
+    </g>
+    <g transform="translate(7,10)">
+        <path fill="black" d="M97,48 L97,45 L90,45 L68,65 L90,85 L97,85 L97,83 L77,65 Z"/>
+    </g>
+
+
+</svg>

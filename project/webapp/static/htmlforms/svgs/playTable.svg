@@ -1,0 +1,39 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+        "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="1000" height="600" version="1.1" xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>table</title>
+    <g transform="translate(-80, -300)">
+        <ellipse cx="580" cy="600" rx="500" ry="300" fill="darkgreen"/>
+        <path d="M80 600 L80 300 L1080 300 L1080 600" fill="darkgreen"/>
+        <path stroke="white" d="M80,500 L1080,500"/>
+        <rect x="510" y="550" width="140" height="100" fill="darkgreen"/>
+        <image x="520" y="550" width="40" height="40" xlink:href="chip.svg" />
+        <image x="560" y="550" width="40" height="40" xlink:href="chip.svg" />
+        <image x="600" y="550" width="40" height="40" xlink:href="chip.svg" />
+        <image x="520" y="590" width="40" height="40" xlink:href="chip.svg" />
+        <image x="560" y="590" width="40" height="40" xlink:href="chip.svg" />
+        <image x="600" y="590" width="40" height="40" xlink:href="chip.svg" />
+        <g transform="translate(280,780) rotate(35) translate(-420,-820)">
+            <rect x="250" y="700" width="60" height="80" fill="none" stroke="white" stroke-width="2"/>
+        </g>
+        <g transform="translate(380,780) rotate(20) translate(-460,-795)">
+            <rect x="350" y="700" width="60" height="80" fill="none" stroke="white" stroke-width="2"/>
+        </g>
+        <g transform="translate(480,780) rotate(10) translate(-520,-780)">
+            <rect x="450" y="700" width="60" height="80" fill="none" stroke="white" stroke-width="2"/>
+        </g>
+        <rect x="550" y="710" width="60" height="80" fill="none" stroke="white" stroke-width="2"/>
+        <g transform="translate(680,780) rotate(-10) translate(-640,-780)">
+            <rect x="650" y="700" width="60" height="80" fill="none" stroke="white" stroke-width="2"/>
+        </g>
+        <g transform="translate(780,780) rotate(-20) translate(-700,-795)">
+            <rect x="750" y="700" width="60" height="80" fill="none" stroke="white" stroke-width="2"/>
+        </g>
+        <g transform="translate(880,780) rotate(-35) translate(-740,-820)">
+            <rect x="850" y="700" width="60" height="80" fill="none" stroke="white" stroke-width="2"/>
+        </g>
+    </g>
+</svg>
+

@@ -1,0 +1,7 @@
+<svg width="150" height="150" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <title>BlackNumber5</title>
+    <path d="M65,25 L53,65 L60,65 L72,25"
+          fill="black"/>
+    <rect x="65" y="30" width="30" height="7" fill="black"/>
+    <path fill="black" d="M53,65 L50,70 Q85,65 95,85 Q105,120 65,110 Q40,110 50,80 L40,110 Q40,120 60,125 Q105,125 105,95 Q105,65 50,65"/>
+</svg>

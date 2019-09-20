@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://docbook.org/xml/5.1/rng/docbook.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://docbook.org/xml/5.1/sch/docbook.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+
+<!-- Entities
+nbsp is &#x00A0;
+-->
+
+<!-- Hyphenations
+XSLTForms
+ma-ni-pu-late
+-->
+<book version="5.1" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>Dokumentation - Praktikum XML-Technologie</title>
+	<info>
+		<author>
+			<personname> Lovis Zenz, Xiaolin Ma, Emir Chalghaf, Rodeina Mohamed </personname>
+		</author>
+		<orgname>Technische Universität München</orgname>
+		<abstract>
+			<para> Im Rahmen des XML-Praktikums werden verschiedene Bestandteile der XML-Technologie von Prof. Dr. Brüggemann-Klein vermittelt und innerhalb eines Projekts in Gruppenarbeit angewandt. Beim Praktikumsprojekt handelt es sich um die Implementierung des berühmten Spiels Blackjack in einer beliebigen Variante. Dabei werden CSS, DTD, XForms, XSLT sowie XQuery und XPath eingeführt und verwendet. Durch die Gruppenarbeit und die wöchentliche Vorlesung sind die Studenten in der Lage, die XML-Technologien zu verstehen und das Projekt gemeinsam zu erschließen. Im Folgenden wird das Praktikumsspiel ausführlich vorgestellt. Das Grundkonzept und die Designentscheidungen sowie die Verwendung und Implementierung des Spiels werden geschildert respektive erklärt. </para>
+		</abstract>
+	</info>
+
+	<chapter>
+		<title>Einleitung des Spielkonzepts</title>
+		<section>
+			<title>Konzeptdesign</title>
+			<para> Bei Blackjack handelt es sich um ein Kartenspiel, das mit sechs französischen Decks gespielt wird. Bis zu sieben Spieler spielen gegen die Bank, vertreten durch den Croupier. Ziel der Spieler ist es, mit mindestens zwei Karten mehr Punkte als der Croupier zu erreichen, ohne 21 Punkte zu überschreiten. Umgekehrt ist es das Ziel des Croupiers, mindestens so viele Punkte wie jeder Spieler zu erreichen, ohne 21 Punkte zu überschreiten. </para>
+			<para> Zu Beginn tätigt jeder Spieler seine Einsätze. Die Einsätze sind durch das Vermögen der Spieler beschränkt. Jeder Spieler tätigt ausschließlich in seiner eigenen Box Einsätze. Jeder Spieler erhält dann zwei offene Karten, der Croupier eine offene und eine verdeckte. Zieht ein Spieler hierbei ein Ass und eine 10 bzw. Ass und König/Dame/Bube, so hat er einen Blackjack. Der Reihe nach kann dann jeder Spieler so lange weitere Karten ziehen (Take), bis er exakt 21 Punkte erreicht, 21 Punkte überschreitet, oder freiwillig seinen Zug beendet. Erreicht ein Spieler mit mehr als zwei Karten 21 Punkte, so hat er lediglich den maximal erreichbaren Punktestand, aber keinen Blackjack erreicht. Zudem kann ein Spieler, der direkt zu Beginn zwei wertgleiche Karten zieht, seine Hand in zwei Hände aufspalten (Split); für die zweite Hand ist derselbe Einsatz wie für die erste Hand zu tätigen. Ein Spieler mit mehreren Händen zieht für jede Hand Karten und kann mit beiden Händen separat gewinnen und verlieren. Haben alle Spieler und der Croupier ihre Züge getätigt, endet die Runde. </para>
+			<para> Bei der Punkteauswertung gewinnen all jene Spieler, die eine höhere Punktzahl als der Croupier erreichen. Dabei gilt außerdem, dass ein Blackjack, der nur von Spielern erreichbar ist, höher zu gewichten ist als 21 Punkte, die mit mehr als zwei Karten erreicht wurden. Außerdem erreichen all jene Spieler, die eine exakt gleiche Punktzahl wie der Croupier erzielen, ein Unentschieden. Alle übrigen Spieler verlieren. Sämtliche Spieler, die gewinnen, erhalten das Doppelte ihres Einsatzes zurück; sämtliche Spieler, die ein Unentschieden erreichen lediglich ihren Einsatz. Die Spieler, die verlieren, erhalten nichts zurück. </para>
+		</section>
+		<section>
+			<title>Implementierungsdesign</title>
+			<para> Im Folgenden erläutern wir einige Aspekte unserer Umsetzung der zuvor beschriebenen Spielidee. </para>
+			<section>
+				<title>Spielablauf</title>
+				<itemizedlist>
+					<listitem>
+						<para> Das Programm beginnt im Hauptmenü. Ein neues Spiel kann gestartet oder ein zuvor begonnenes wiederaufgenommen werden. Zudem können alte Spielstände gelöscht und die Highscores eingesehen werden. </para>
+					</listitem>
+					<listitem>
+						<para> Wird ein neues Spiel begonnen, so können zwischen einem und sieben Spielern hinzugefügt werden, wobei Spielernamen frei wählbar sind. Anschließend kann das Spiel gestartet werden. Es können maximal neun Spielstände erzeugt werden, bevor das Löschen eines alten Spielstandes erforderlich wird. </para>
+					</listitem>
+					<listitem>
+						<para> Im Spiel werden zunächst Einsätze beliebiger Höhe getätigt, wobei das Vermögen des jeweiligen Spielers nicht überzogen werden darf. Im darauffolgenden Durchgang erhält jeder Spieler zwei offene und der Croupier eine offene und eine verdeckte Karte. Im letzten Durchgang haben Spieler, die zuvor zwei wertgleiche Karten gezogen haben, die Möglichkeit einen Split durchzuführen. Anschließen können durch sämtliche Spielteilnehmer der Reihe nach Karten gezogen werden, wobei der Croupier so viele Karten zieht, bis er eine Punktestand von mindestens 17 erreicht. Sobald der Croupier ausreichend Karten gezogen hat, beendet er das Spiel, die Punkte werden ausgezählt und die Highscores werden aktualisiert.</para>
+					</listitem>
+					<listitem>
+						<para> Soll ein Spiel geladen werden, kann aus einer Liste verschiedener Spielstände ausgewählt werden. Die Auswahl kann über einen Button bestätigt werden. Alternativ ist ein Zurückkehren zum Hauptmenü über einen weiteren Button möglich. </para>
+					</listitem>
+					<listitem>
+						<para> Das Löschen eines Spielstandes erfolgt analog zum Laden. </para>
+					</listitem>
+					<listitem>
+						<para> Die Highscores beinhalten eine absteigend sortierte Liste der Höchstpunktzahlen aller Spieler. Dabei werden die Spieler über ihre selbstgewählten Namen identifiziert. Folglich betrachtet das Spiel Namen als eindeutig und betrachtet zwei namensgleiche Spieler als identisch. </para>
+					</listitem>
+				</itemizedlist>
+			</section>
+			<section>
+				<title>Benutzeroberfläche</title>
+				<para>Screenshots der einzelnen Spielbildschirme und Mneüs sind im Folgenden abgebildet.</para>
+				<section>
+					<title>Hauptmenü</title>
+					<para> "New Game" ist nur sichtbar, wenn es maximal neun gespeicherte Spielstände gibt, "Load Game" und "Delete Game" nur, wenn es mindestens einen gespeicherten Spielstand gibt, und "Show Highscores" nur, wenn Highscores in der Datenbank gespeichert sind.
+					<figure>
+						<title>Hauptmenü</title>
+						<mediaobject>
+							<imageobject>
+								<imagedata width="100%" fileref="./main_menu.png" format="PNG"/>
+							</imageobject>
+						</mediaobject>
+					</figure></para>
+				</section>
+				<section>
+					<title>Neues Spielmenü</title>
+					<para> Namen können frei eingegeben werden, "Add Player" und das zugehörige Texteingabefeld sind nur sichtbar, wenn maximal sieben Spieler bereits hinzugefügt wurden, und "Start Game" ist nur sichtbar, wenn bereits mindestens ein Spieler hinzugefügt wurde.
+						<figure>
+							<title>Neues Spielmenü</title>
+							<mediaobject>
+								<imageobject>
+									<imagedata width="100%" fileref="./new_game_menu.png" format="PNG"/>
+								</imageobject>
+							</mediaobject>
+						</figure>
+					</para>
+				</section>
+				<section>
+					<title>Spielbildschirm</title>
+					<para> Je nach Zustand des Spiels und der einzelnen Spieler können der Croupier und die Spieler Wetteinsätze tätigen (Bet!), den Zug beenden (End turn!), den Zug beginnen (Start turn!), ihre Hand splitten (Split!), eine Karte ziehen (Draw card!), den Wetteinsatzdurchgang beenden (End betting!) oder das Spiel beenden (End game!). Dabei können die ersten vier Aktionen nur durch Spieler und die letzen zwei nur durch den Croupier initiiert werden. Zudem kann jederzeit über "Return!" zum Hauptmenü zurückgekehrt werden.
+						<figure>
+							<title>Spielbildschirm</title>
+							<mediaobject>
+								<imageobject>
+									<imagedata width="100%" fileref="./game_screen.png" format="PNG"/>
+								</imageobject>
+							</mediaobject>
+						</figure>
+					</para>
+				</section>
+				<section>
+					<title>Ladebildschirm</title>
+					<para> Es kann einer der vorhandenen Spielstände ausgewählt werden. Die Auswahl wird über "Load Game" bestätigt. Zudem kann über "Return" zum Hauptmenü zurückgekehrt werden.
+						<figure>
+							<title>Ladebildschirm</title>
+							<mediaobject>
+								<imageobject>
+									<imagedata width="100%" fileref="./load_screen.png" format="PNG"/>
+								</imageobject>
+							</mediaobject>
+						</figure>
+					</para>
+				</section>
+				<section>
+					<title>Löschbildschirm</title>
+					<para> Es kann einer der vorhandenen Spielstände ausgewählt werden. Die Auswahl wird über "Delete Game" bestätigt. Zudem kann über "Return" zum Hauptmenü zurückgekehrt werden.
+						<figure>
+							<title>Löschbildschirm</title>
+							<mediaobject>
+								<imageobject>
+									<imagedata width="100%" fileref="./delete_screen.png" format="PNG"/>
+								</imageobject>
+							</mediaobject>
+						</figure>
+					</para>
+				</section>
+				<section>
+					<title>Highscores</title>
+					<para> Für jeden Spieler, der eine komplette Spielrunde abgeschlossen hat, ist ein einziger Eintrag im Highscore zu sehen. Spieler werden dabei über ihren Namen identifiziert, weswegen EInträge aus verschiedenen Spielen fürhere Einträge überschreiben können, sofern sie den Punktestand übertreffen. Die Eintrage sind nach Punkteständen absteigend sortiert.
+						<figure>
+							<title>Highscores</title>
+							<mediaobject>
+								<imageobject>
+									<imagedata width="100%" fileref="./high_scores.png" format="PNG"/>
+								</imageobject>
+							</mediaobject>
+						</figure>
+					</para>
+				</section>
+			</section>
+		</section>
+	</chapter>
+	<chapter>
+		<title>Diagramme</title>
+		<section>
+			<title>UML-Diagramm</title>
+			<para> Um das Spiel übersichtlich darstellen zu können, ist im Folgenden ein implementierungsnahes UML-Diagramm unseres Programms zu sehen. Es ist dabei zu beachten, dass dieses Diagramm nicht vollständig mit unserer Implementierung übereinstimmt, da nicht sämtliche Funktionalitäten von XQuery in UML abbildbar sind; Beispielsweise symbolisieren wir Referenzen im UML-Diagramm durch Referenzattribute, um den Bezug zwischen verschiedenen Elementen hervorzuheben.
+				<figure>
+					<title>UML-Diagramm</title>
+					<mediaobject>
+						<imageobject>
+							<imagedata width="100%" fileref="./class_implementation_diagram.jpeg" format="JPEG"/>
+						</imageobject>
+					</mediaobject>
+				</figure>
+			</para>
+		</section>
+		<section>
+			<title>State-Diagramm</title>
+			<para> Um Zustandsübergänge unseres Programms und damit mögliche Programmabläufe darzustellen, ist im Folgenden ein State-Diagramm abgebildet, das den beispielshaften Ablauf eines Spiels darstellt.
+				<figure>
+					<title>State-Diagramm</title>
+					<mediaobject>
+						<imageobject>
+							<imagedata width="100%" fileref="./state_diagram.png" format="PNG"/>
+						</imageobject>
+					</mediaobject>
+				</figure>
+			</para>
+		</section>
+	</chapter>
+	<chapter>
+		<title>Implementierung</title>
+		<section>
+			<title>Datenspeicherung: DTD &amp; XML</title>
+			<para> Für die Implementierung des XMLs ist das DTD basierend auf dem UML-Diagramm wie folgt strukturiert: Es enthält die sechs Elemente State, Deck, Dealer, Player, Hand und Card. Alle Attribute der Elemente sind mit dem Schlüsselwort #REQUIRED deklariert, wodurch die zugehörigen Typen im XML angegeben werden müssen. CDATA bezeichnet hier "character"-Daten.
+				<figure>
+					<title>DTD</title>
+					<mediaobject>
+						<imageobject>
+							<imagedata width="100%" fileref="./dtd.png" format="PNG"/>
+						</imageobject>
+					</mediaobject>
+				</figure></para>
+			<section>
+				<title>State</title>
+				<para> Das Element state enthält die drei Unterelemente deck, dealer und player. Hierbei repräsentiert deck das Kartendeck; dealer den Croupier. Das Sprachmittel + bei player stellt sicher, dass mindestens ein Spieler am Tisch sitzt. Durch das Attribut "currentPlayer" wird der Spieler referenziert, der aktuell an der Reihe ist. Das Attribut "gameState" bezeichnet den aktuellen Zustand des gesamten Spiels im Spielablauf. </para>
+			</section>
+			<section>
+				<title>Deck</title>
+				<para> Dieses Element enthält als einziges Unterelement card, wobei das Sprachmittel + anzeigt, dass das Deck aus mindestens einer, möglicherweise mehreren, Karten besteht. </para>
+			</section>
+			<section>
+				<title>Dealer</title>
+				<para> Dieses Element enthält als einziges Unterelement card mit dem Sprachmittel *, welches bedeutet, dass der Croupier keine, eine oder mehrere Karten haben kann. Dem dealer-Element ist fest die id "Dealer" zugewiesen und ein Attribut handValue, das im Spieldurchlauf konstant aktualisiert wird, speichert den Wert der enthaltenen Karten.</para>
+			</section>
+			<section>
+				<title>Player</title>
+				<para> Dieses Element besitzt als einziges Unterelement hand. Es ist durch das Sprachmittel + gekennzeichnet, welches angibt, dass der Spieler mindestens eine Hand hat. Das Element player hat zudem die folgenden fünf Attribute: id für die Identifikation des Spielers, currentHand zur Referenzierung der aktuell aktiven Hand, name als Spielername, state als Beschreibung des aktuellen Zustands des Spielers im Spielablauf und deposit als Anzeige des Vermögens. </para>
+			</section>
+			<section>
+				<title>Hand</title>
+				<para> Dieses Element enthält als einziges Unterelement card mit dem Sprachmittel *, welches anzeigt, dass jede hand aus keiner, einer oder mehreren Karten besteht. Die drei Attribute id, box und handValue dienen der Identifikation des hand-elements, der Beschreibung des Wetteinsatzes und der Beschreibung des Werts der enthaltenen Karten. </para>
+			</section>
+			<section>
+				<title>Card</title>
+				<para> Dieses Element enthält keine Unterelemente, was durch EMPTY angezeigt wird. Die drei Attribute des Elements - cardColour, cardValue und isHidden - beschreiben die Karte, wobei letzteres anzeigt ob sie verdeckt ist. </para>
+			</section>
+			<section>
+				<title>Randbemerkung</title>
+				<para> Da wir die ids selbst festlegen, verzichten wir auf die Attributtypen ID und IDREF und verwenden stattdessen festgelegt Wertemengen. </para>
+			</section>
+		</section>
+		<section>
+			<title>Datenpräsentation: XSL &amp; SVG</title>
+			<para>Zur Transformation von XML in HTML verwenden wir XSL und darin eingebettetes sowie aus externen Dateien eingebundenes SVG.</para>
+			<section>
+				<title>Gerüst: XSL</title>
+				<para> Wir verwenden sechs Templates für die Konvertierung der fünf einzelnen Elemente State, Deck, Dealer, Player und Card. Für Card werden zwei verschiedene Templates verwendet. Insbesondere erzeugt die Formatierung mittels Inline-CSS ein responsives Layout, d.h. die Elemente skalieren mit der Größe des Browserfensters.
+					<figure>
+						<title>XSL Überblick</title>
+						<mediaobject>
+							<imageobject>
+								<imagedata width="100%" fileref="./xsl_overview.png" format="PNG"/>
+							</imageobject>
+						</mediaobject>
+					</figure>
+					Das erzeugte HTML beinhaltet links ein Menü, um zum Hauptmenü zurückzukehren, mittig die Darstellung des aktuellen Spielzustandes und rechts die möglichen Aktionen, welche über Formulare und Buttons initiiert werden.
+					<figure>
+						<title>XSL State</title>
+						<mediaobject>
+							<imageobject>
+								<imagedata width="100%" fileref="./xsl_state.png" format="PNG"/>
+							</imageobject>
+						</mediaobject>
+					</figure>Da die möglichen Aktionen vom Spielzustand abhängig, sind nur solche Aktionen möglich, die zum jeweiligen zeitpunkt sinnvoll sind. Alle anderen Aktionen sind ausgeblendet. Die Wahl der anzuzeigenden Elemente erfolgt mittels "xsl:choose" und spielzustandsabhängigen "xsl:variable".
+					<figure>
+						<title>XSL Dealerbuttons in State</title>
+						<mediaobject>
+							<imageobject>
+								<imagedata width="100%" fileref="./xsl_dealer.png" format="PNG"/>
+							</imageobject>
+						</mediaobject>
+					</figure></para>
+				<section>
+					<title>State</title>
+					<para> Im zugehörigen Template wird das Grundgerüst des resultierenden HTML-Dokuments gelegt. Der Spieltisch wird als Hintergrundgrafik eingebunden und weitere Templates werden aufgerufen.</para>
+				</section>
+				<section>
+					<title>Deck</title>
+					<para> In diesem Template werden lediglich drei Kartenrückseiten als SVGs zur Repräsentation des Kartendecks ausgegeben. </para>
+				</section>
+				<section>
+					<title>Dealer</title>
+					<para> In diesem Template wird lediglich das Template für die Karten des Croupiers aufgerufen. </para>
+				</section>
+				<section>
+					<title>Player</title>
+					<para> Zunächst werden in diesem Template der Name und das Vermögen des jeweiligen Spielers ausgegeben. Anschließend werden bis zu drei Hände ausgegeben. Die Ausgabe für jede einzelne Hand setzt sich aus der Ausgabe der zugehörigen Wette und einem Aufruf des Templates für die Karten des Spielers zusammen. </para>
+				</section>
+				<section>
+					<title>Card</title>
+					<para> Wir haben je ein XSLT-Template für die Generierung der Karten des Spielers und des Croupiers zu unserer XSL-Datei hinzugefügt. Das Template für den Croupier unterschiedet sich vom Template für den Spieler dahingehend, dass es eine Fallunterscheidung nach verdeckten und offenen Karten trifft. Für erstere wird lediglich ein Kartenhintergrund ausgegeben. Letztere werden ebenso behandelt wie es mit den Karten des Spielers geschieht: Aus Basis der Attributwerte des zugrundeliegenden XML-Elements vom Typ "card" für Kartenfarbe und Kartenwerte werden Pfade erzeugt und somit SVGs schrittweise zu einer vollständigen Karte zusammengesetzt. Hierdurch kann Code-Redundanz reduziert werden, da nicht für jede einzelne Karte ein separates Codesegment zur Generierung erforderlich ist, sondern sämtliche Karten durch ein einzelnes Codesegment generiert werden können. </para>
+				</section>
+		</section>
+			<section>
+				<title>Graphiken: SVG</title>
+				<para>Graphische Element werden mittels SVG erzeugt und zusammnegesetzt, um anschließend durch XSL aufgerufen und kombiniert werden zu können.</para>
+				<section>
+					<title>Benutzeroberfläche</title>
+					<para> Die Benutzeroberfläche des Blackjack Spiels besteht aus jeweils statischen und dynamischen Teilen. </para>
+					<section>
+						<title>Spieltisch</title>
+						<para> Der Spieltisch ist total statisch. Er besteht aus zwei graphischen SVG-Basiselementen wie Ellipse und Rechteck. </para>
+					</section>
+					<section>
+						<title>Karte</title>
+						<para> Um unsere Aufgaben zu erleichtern und nicht 52 separate Karten zu schreiben, definieren wir XSL, sodass alle Karte dynamisch generiert werden. Dabei verwenden wir vorallem die folgenden statischen SVGs. </para>
+						<section>
+							<title>Kartenfarbe</title>
+							<para> Vier SVGs werden für Kartenfarben geschrieben, jeweils Kreuz, Pik, Herz und Karo. Solche Kartenfarben bestehen aus mehreren graphischen SVG-Basiselementen wie Kreis, Pfad, Polygonzug, etc. </para>
+							<mediaobject>
+								<imageobject>
+									<imagedata align="left" fileref="../../documentation/project/heart.png" scale="40"/>
+								</imageobject>
+							</mediaobject>
+						</section>
+						<section>
+							<title>Kartenwert</title>
+							<para> Die Kartenwerte sind komplizierter umzusetzen als die Kartenfarben, da schwarze und rote Werte sowie Buchstaben A / J / Q / K und Zahlen von 2 bis 10 für beide Farben benötigt werden. Deswegen haben wir insgesamt 26 SVGs für die Werte geschrieben. Solche Kartenwerte bestehen auch aus mehreren graphischen SVG-Basiselementen wie Kreis, Pfad, Polygonzug usw. </para>
+							<mediaobject>
+								<imageobject>
+									<imagedata align="left" fileref="../../documentation/project/BlakcJ.png" scale="40"/>
+								</imageobject>
+							</mediaobject>
+						</section>
+						<section>
+							<title>Kartenhintergrund</title>
+							<para> Um die Karte hübscher zu machen, malen wir dabei auch ein hohles Rechteck durch SVG. </para>
+						</section>
+						<section>
+							<title>Kartenrückseite</title>
+							<para> Außerdem fügen wir die klassische Kartenrückseite als SVG-Bild-Element ins unser Projekt ein. </para>
+						</section>
+					</section>
+				</section>
+				<section>
+					<title>Randbemerkungen</title>
+					<para> Nachdem wir alle die erwähnten SVGs geschrieben haben, kann unser Server durch die XSLT die Karten dynamisch erstellen. Jede Karte besteht dabei aus drei Komponenten, erstens aus dem Hintergrund, zweitens aus der Kartenfarbe und zuletzt aus dem Kartenwert. Das Produkt kann mittels XSL in unsere Darstellung eingefügt werden.Somit verbinden wir die immer gleiche Darstellung typgleicher Karten mit der Vermeidung von Redundanz bei ihrer Generierung. </para>
+					<mediaobject>
+						<imageobject>
+							<imagedata align="left" fileref="./XSL-SVG.png" scale="40"/>
+						</imageobject>
+					</mediaobject>
+				</section>
+			</section>
+		</section>
+		<section>
+			<title>Datenverarbeitung: XQuery</title>
+			<para> Die Struktur der XQuery-Dateien ist weitestgehend - sofern möglich - nach dem Prinzip der Datenkapselung entworfen. Blackjack dient dabei als Einstiegspunkt des Programms, Sammelstelle für sämtliche REST-Endpunkte und Schnittstelle zur BaseX-Datenbank. Hier werden Menüs erzeugt und XML-Dokumente durch Serialisierung mit Dokumententypdefinitionen und durch Verarbeitungsinstruktionen mit XSL-Transformationsszenarios verbunden. Außerdem werden hier REST-Pfade mit Funktionen verknüpft und REST-Queryparameter ausgelesen. Zuletzt werden hier Datenbankinhalte ausgelesen, aktualisiert und neu erzeugt. All dies erfolgt an keiner anderen Stelle. Durch die Verkettung von Funktionen, endet jeder Aufruf einer Funktionen im Hauptmenü, dem Hauptspielbildschirm, dem Lade- oder Löschbildschirm, oder der Präsentation der Highscores. Folglich werden die Spielstände konstant aktualisiert und die aktualisierten Spielstände automatisch in der Datenbank gesichert, wodurch ein manuelles Speichern unnötig ist. Ebenso werden abgeschlossene Spielstände automatisch aus der Datenbank gelöscht, weswegen auch ein manuelles Löschen unnötig ist. Letzteres ist in Gegensatz zu ersterem jedoch möglich. Da es sich häufig um mit "%updating" gekennzeichnete Funktionen handelt, müssen "web:redirect"-Elemente mit "update:output"-Wrapperelementen versehen werden, die Return-Ausdrücke als Update-Ausdrücke kaschieren.
+				<figure>
+					<title>XQuery Blackjack</title>
+					<mediaobject>
+						<imageobject>
+							<imagedata width="100%" fileref="./xquery_blackjack.png" format="PNG"/>
+						</imageobject>
+					</mediaobject>
+				</figure>
+			</para>
+			<para> State und Highscores sind die einzigen direkt aus Blackjack erreichbaren XQuery-Dateien. Während in Highscores lediglich das Aktualisieren der Highscores zum Ende einer Spielrunde umgesetzt ist, bildet State die Schnittstelle zwischen Blackjack und Deck, Dealer und Player. Funktionsaufrufe aus Blackjack von State-Funktionen geben aktualisierte State-Elemente zurück. Hierzu werden Elemente von State mit "update" und einem Update-Ausdruck versehen und sodann zurückgegeben. Dies kaschiert "updating"-Ausdrücke als Return-Ausdrücke.
+				<figure>
+					<title>XQuery State</title>
+					<mediaobject>
+						<imageobject>
+							<imagedata width="100%" fileref="./xquery_state.png" format="PNG"/>
+						</imageobject>
+					</mediaobject>
+				</figure>
+			</para>
+			<para> Das Kaschieren ermöglicht das Mischen von Update- und Return-Ausdrücken, was unsere Art des Umgangs mit dem Update-Constraint darstellt. </para>
+			<para> Bis auf besonders einfache Updates, die in State durchgeführt werden, sind die Updates der Spielzustände in Deck, Dealer, Player, Hand und Card implementiert, wobei der Zugriff auf Hand über Player und auf Card über Deck, Hand und Dealer erfolgt. In welcher XQuery-Datei eine Update-Funktion implementiert ist, hängt von dem Unterelement ab, das den logischen Kontext der Funktion bildet. Dieses stimmt meist, aber nicht immer, mit dem Unterelement überein, das der Funktion als Parameter übergeben wird. Ein Gegenbeispiel ist die Funktion "player:endTurn", der ein State-Element übergeben wird, da nicht nur ein Player-Element, sondern auch ein Dealer-Element abgeändert wird.
+				<figure>
+					<title>XQuery Player</title>
+					<mediaobject>
+						<imageobject>
+							<imagedata width="100%" fileref="./xquery_player.png" format="PNG"/>
+						</imageobject>
+					</mediaobject>
+				</figure>
+			</para>
+		</section>
+	</chapter>
+	<chapter>
+		<title>Installationsanleitung</title>
+		<para> Das Spiel benötigt eine BaseX-Installation mit laufendem BaseX-WebServer und einer Datenbank "htmlforms". In dieser sind keine Dateien anzulegen, da dies durch das Programm vorgenommen wird. Unter "restxq" und "webapp/static" sind jeweils die zugehörigen Ordner namens "htmlforms" abzulegen. Mit Standardeinstellungen von BaseX ist unser Programm dann unter "localhost:8984/htmlforms" zu erreichen. </para>
+	</chapter>
+	<chapter>
+		<title>Zielerreichung </title>
+		<para> Im Rahmen des Projektspiels hat die Gruppe Wissen über mehrere XML-Bestandteile erworben. Die Gruppe beherrscht XML, XSLT und XQuery und kann sich gut mit ihren Instanzen und Namespaces auseinandersetzen. Mithilfe der ersten Aufgaben am 			Anfang des Semesters kann die Gruppe XML-Dokumenten parsen und mithilfe von CSS Files in Web-Browsern visualisieren. Für den Entwurf des Spiels und für die Designentscheidung hat die Gruppe SVG-Dateien unter Verwendung von XLink implementiert. Dazu zählt auch die Dokumententypdefinition für die Modellierung der Struktur von XML-Dateien. Um über XML-Anwendungen zu navigieren hat die Gruppe mithilfe von XPath und XSLT-Transformationen der XML-Dokumenten implementiert. In unserem Projekt spielen XQuery-Funktionen eine große Rolle, um die Funktionalität des Spiels zu erreichen. Dazu zählen der Aufruf von statischen Webdateien, die Implementierung von RestXQ-Endpunkte und der Zugriff auf eine BaseX-Datenbank. In unserem Projekt verwenden wir keine XForms, da diese deutlich aufwändiger umzusetzen wären als direkte Datenbankzugriffe und somit einfache HTML-Forms ausreichend sind. Am Ende der Implementierung des Projektspiels ist die Gruppe auch in der Lage, den gesamten Projektentwurf und die gesamte Projektumsetzung mithilfe von DocBook zu	dokumentieren. </para>
+		<para> Innerhalb des Praktikums sind die oben genannten XML-Technologien in Teamarbeit erarbeitet worden. Die Gruppe hat sich wöchentlich nach der Vorlesung getroffen, um den Lernstoff auszustauschen und sich auf die nächste Aufgabe vorzubereiten. In der Grupper herrschten gute Kommunikation, Spaß am Projekt und aktives Erbringen von Feedback und Ideen durch alle Gruppenmitglieder vor. </para>
+	</chapter>
+	<chapter>
+		<title>Online-Literatur</title>
+		<para>
+			<itemizedlist>
+				<listitem>
+					<para><link xlink:href="https://www.w3schools.com/xml/"/></para>
+				</listitem>
+				<listitem>
+					<para>
+						<link xlink:href="http://www.w3.org/XML/"/>
+					</para>
+				</listitem>
+				<listitem>
+					<para>
+						<link xlink:href="https://wiki.selfhtml.org/wiki/XML"> </link>
+					</para>
+				</listitem>
+			</itemizedlist>
+		</para>
+	</chapter>
+	<chapter>
+		<title>Buch-Literatur</title>
+		<para>
+			<itemizedlist>
+				<listitem>
+					<para> E.R. Harold u.a.: XML in a Nutshell. O'Reilly 2001. </para>
+				</listitem>
+				<listitem>
+					<para> G. Kappel u.a.: Web Engineering. DPunkt 2003. </para>
+				</listitem>
+				<listitem>
+					<para> J. Fawcett, L. Quin, D. Ayers: Beginning XML. Wrox 2012. </para>
+				</listitem>
+				<listitem>
+					<para> Moller, M. Schwartzbach: An Introduction to XML and Web Technologies. Addison-Wesley 2006. </para>
+				</listitem>
+			</itemizedlist>
+		</para>
+	</chapter>
+</book>

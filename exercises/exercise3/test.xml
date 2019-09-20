@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="blackjack.xsl"?>
+
+<!DOCTYPE state SYSTEM "blackjack.dtd">
+
+<state currentPlayer="PER-1">
+    <deck>
+        <card cardColour="Clubs" cardValue="2" isHidden="true"/>
+        <card cardColour="Clubs" cardValue="3" isHidden="true"/>
+    </deck>
+    <card cardColour="Spades" cardValue="Q" isHidden="true"/>
+    <dealer>
+        <card cardColour="Clubs" cardValue="A" isHidden="true"/>
+        <card cardColour="Spades" cardValue="A" isHidden="false"/>
+    </dealer>
+    <player id="PER-1" name="Player 1" deposit="200">
+        <hand box="20">
+            <card cardColour="Spades" cardValue="J" isHidden="false"/>
+            <card cardColour="Spades" cardValue="10" isHidden="false"/>
+            <card cardColour="Spades" cardValue="7" isHidden="false"/>
+        </hand>
+        <hand box="10">
+            <card cardColour="Spades" cardValue="J" isHidden="false"/>
+            <card cardColour="Spades" cardValue="Q" isHidden="false"/>
+        </hand>
+    </player>
+    <player id="PER-2" name="Player 2" deposit="200">
+        <hand box="15">
+            <card cardColour="Diamonds" cardValue="7" isHidden="false"/>
+            <card cardColour="Diamonds" cardValue="8" isHidden="false"/>
+        </hand>
+    </player>
+</state>
+
